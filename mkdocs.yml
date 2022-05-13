@@ -1,0 +1,7 @@
+site_name: "Basic Blueprint"
+theme:
+  name: "material"
+  custom_dir: overrides
+
+plugins:
+  - search
