@@ -1,14 +1,12 @@
 # Usage
 
-Now you can program your application inside the blueprint directory. The following command will start your application.
+Now you can program your application inside the blueprint directory. The following command will start your application:
 
 ```bash
-poetry run start
+python <app_name>
 ```
 
-The above command will run the `app` function in the `main.py` module. You can import your custom functions and hook it to the `app` function to run them.
-
-If not you can change the entry point to a different function by changing the `blueprint.main:app` configuration in the `pyproject.toml` file.
+The above command will run the `run` function, within the `__main__.py` script, from the `main.py` module in the `modules` folder. You can import your custom functions and hook it to the `run` function to run them.
 
 **To change the main module name**, you can rename the `blueprint` directory. But make sure you also rename the `name` in the `pyproject.toml` file.
 
@@ -16,16 +14,14 @@ If not you can change the entry point to a different function by changing the `b
 
 ```python
 import toml
-APP_CONFIG = toml.load("config.toml")["app"]
+CONFIG = toml.load("config.toml")["app"]
 
-app_name = APP_CONFIG['APP_NAME']
+app_name = CONFIG.get('APP_NAME')
 ```
 
-You can also add app secrets directly to the `.env` file and read it anywhere from your project with the help of Python's built in `os` module.
+You can also add app secrets directly to an `.env` file in the root project directory and read it anywhere from your project with the help of Python's built in `os` module.
 
 ```python
 import os
-secret = os.environ['APP_SECRET']
+secret = os.environ.get('APP_SECRET')
 ```
-
-This is possible because we've loaded the env file from our `main.py` module. If you are replacing this module, be sure to load it again.
