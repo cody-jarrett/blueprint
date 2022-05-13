@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "blueprint"
-version = "0.2.0"
+version = "0.3.0"
 description = ""
 authors = ["Cody Jarrett <cody-jarrett@users.noreply.github.com>"]
 
@@ -21,9 +21,6 @@ mkdocs-material = "^7.3.1"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
-
-[tool.poetry.scripts]
-start = "blueprint.main:app"
 
 # Set isort profile to use black module
 [tool.isort]
