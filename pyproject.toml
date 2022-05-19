@@ -8,6 +8,7 @@ authors = ["Cody Jarrett <cody-jarrett@users.noreply.github.com>"]
 python = "^3.8"
 python-dotenv = "^0.19.0"
 toml = "^0.10.2"
+mypy = "^0.950"
 
 [tool.poetry.dev-dependencies]
 autoflake = "^1.4"
