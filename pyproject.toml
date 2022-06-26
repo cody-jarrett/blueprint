@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "blueprint"
-version = "0.4.0"
+version = "0.4.1"
 description = ""
 authors = ["Cody Jarrett <cody-jarrett@users.noreply.github.com>"]
 
@@ -25,7 +25,7 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-start = "blueprint.main:app"
+run = "blueprint.main:start"
 
 [tool.black]
 line-length = 79

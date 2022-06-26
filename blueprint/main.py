@@ -10,6 +10,6 @@ load_dotenv(".env")
 CONFIG = toml.load("config.toml")["app"]
 
 
-def app() -> None:
+def start() -> None:
     print(f"This is {CONFIG.get('NAME')} {__version__}")
     print(f"Here's a test secret: {os.environ.get('TEST')}")
