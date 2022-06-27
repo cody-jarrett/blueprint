@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "blueprint"
-version = "0.4.1"
+version = "0.4.2"
 description = ""
 authors = ["Cody Jarrett <cody-jarrett@users.noreply.github.com>"]
 
@@ -12,6 +12,7 @@ toml = "^0.10.2"
 [tool.poetry.dev-dependencies]
 autoflake = "^1.4"
 black = "^22.3.0"
+flake8 = "^4.0.1"
 isort = "^5.9.3"
 mkdocs-material = "^8.3.8"
 mypy = "^0.961"
@@ -25,7 +26,7 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-run = "blueprint.main:start"
+start = "blueprint.main:start"
 
 [tool.black]
 line-length = 79
