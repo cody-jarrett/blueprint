@@ -1,5 +1,7 @@
-from blueprint import __version__
+import toml
+
+name = toml.load("pyproject.toml")["tool"]["poetry"]["name"]
 
 
-def test_version() -> None:
-    assert __version__ == "0.4.2"
+def test_name() -> None:
+    assert name == "blueprint"

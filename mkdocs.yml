@@ -1,7 +1,6 @@
-site_name: "Basic Blueprint"
+site_name: "Blueprint"
 theme:
   name: "material"
-  custom_dir: overrides
 
 plugins:
   - search
